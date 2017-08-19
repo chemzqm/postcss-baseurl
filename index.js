@@ -1,6 +1,6 @@
 var postcss = require('postcss')
 
-var urlRe = /url\('(\/.+)'\)/
+var urlRe = /url\((['"])(\/.+)\1\)/
 
 module.exports = postcss.plugin('postcss-baseurl', function (opts) {
   opts = opts || {}
@@ -16,7 +16,7 @@ module.exports = postcss.plugin('postcss-baseurl', function (opts) {
         if (value.indexOf('url(') !== -1) {
           let ms = value.match(urlRe)
           if (ms == null) return
-          decl.value = value.replace(ms[1], base + ms[1])
+          decl.value = value.replace(ms[2], base + ms[2])
         }
       })
     })

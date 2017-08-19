@@ -17,6 +17,11 @@ it('should add base url', () => {
              'a{ background: url(\'/mobile/myimage.png\'); }', {base: '/mobile'})
 })
 
+it('should support double quote', () => {
+  return run('a{ background: url(\"/myimage.png\"); }',
+             'a{ background: url(\"/mobile/myimage.png\"); }', {base: '/mobile'})
+})
+
 it('should not add base url', () => {
   return run('a{ background: url(\'./myimage.png\'); }',
              'a{ background: url(\'./myimage.png\'); }', {base: '/mobile'})
