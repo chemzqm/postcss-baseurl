@@ -1,0 +1,34 @@
+{
+  "name": "postcss-baseurl",
+  "version": "0.0.1",
+  "description": "PostCSS plugin for add baseurl to absolute url assets",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "baseurl"
+  ],
+  "author": "chemzqm <chemzqm@gmail.com>",
+  "license": "MIT",
+  "repository": "chemzqm/postcss-baseurl",
+  "bugs": {
+    "url": "https://github.com/chemzqm/postcss-baseurl/issues"
+  },
+  "homepage": "https://github.com/chemzqm/postcss-baseurl",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true
+    }
+  }
+}
